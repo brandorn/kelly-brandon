@@ -1,0 +1,12 @@
+# General
+title: Kelly & Brandon
+email: brandon.s.dorn@gmail.com
+url: "http://kelly-brandon.com" # the base hostname & protocol 
+
+# Build settings
+markdown: kramdown
+
+# Other
+permalink: /:categories/:title
+sass:
+  sass_dir: styles/_sass 

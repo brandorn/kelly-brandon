@@ -1,0 +1,99 @@
+// Global
+
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  
+  font-size: 100%;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  @media all and (min-width: $break-large) { font-size: 110%; }
+  @media all and (max-width: $break-small) { font-size: 104%; }
+}
+
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+  color: $black-01;
+}
+
+@mixin body-container {
+  margin: 0 auto;
+  max-width: 920px;
+  padding-right: 40px;
+
+  p { max-width: 720px;}
+}
+
+.body-container { @include body-container; }
+
+
+// Type
+
+h1 {
+  color: $black-01;
+  font-family: $sans;
+  font-size: 2.14rem;
+  font-weight: 400;
+  letter-spacing: 16px;
+  line-height: 180%;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $serif;
+  font-size: 1.1rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h3 {}
+
+p {
+  font-family: $sans;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+.label-serif-small {
+  font-family: $serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 6px;
+  line-height: 100%;
+  text-transform: lowercase;
+}
+
+.label-sans-small {
+  font-family: $sans;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+
+// Header & Nav
+
+header {
+  background-color: tan;
+  padding: 6rem 0;
+}
+
+// Body
+
+section {
+  @include body-container;
+  margin: 6rem auto;
+
+}
+
+
+
+
+// Shadowbox

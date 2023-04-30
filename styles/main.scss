@@ -1,0 +1,46 @@
+---
+---
+@charset "UTF-8";
+
+// Color
+
+$white-01: rgba(255,255,255, 1);
+
+$black-01: rgba(0,0,0,.96);
+$black-02: rgba(0,0,0,.56);
+$black-03: rgba(0,0,0,.40);
+$black-04: rgba(0,0,0,.16);
+$black-05: rgba(0,0,0,.08);
+$black-06: rgba(0,0,0,.02);
+
+$red: #E23907;
+$brown-01: #925D45;
+
+// Shadows
+
+@mixin shadow-default {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: ease-in-out 200ms;
+}
+
+@mixin shadow-hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px);
+  transition: ease-in-out 200ms;
+}
+
+// Breakpoints
+
+$body-content-width: 38rem;
+$break-large: 1400px;
+$break-medium: 960px;
+$break-small: 760px;
+$break-tiny: 440px;
+
+
+// SCSS partials
+
+@import
+  "type",
+  "base"
+;
