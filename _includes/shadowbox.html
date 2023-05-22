@@ -1,3 +1,32 @@
-<div class="shadowbox">
-  <p>Shadowbox placeholder.</p>
+<div class="shadowbox-items">
+
+  <div class="row">
+    {% assign shadowboxList = site.posts | sort: "order" %}
+
+    <ul class="thumbs">
+      {% for post in shadowboxList %}
+        {% if post.order > 0 && post.order < 6%}
+        <li class="{{ post.order }}" style="background-image: url('/src/img/{{ post.img }}.jpg')"></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <ul class="details">
+      {% for post in shadowboxList %}
+        {% if post.order > 0 && post.order < 6%}
+        <li class="{{ post.order }}"> 
+          <div class="item-content">
+            <div class="image" style="background-image: url('/src/img/{{ post.img }}.jpg')"></div>
+            <div class="text">
+              <p class="title"> {{ post.title }} </p>
+              <p class="content">{{ post.content }}</p>
+              <p class="author"> {{ post.author }} </p>
+            </div>
+          </div>
+          <div class="close"> CLOSE </div>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
 </div>

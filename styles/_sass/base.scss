@@ -44,8 +44,9 @@ h1 {
 
 h2 {
   font-family: $serif;
-  font-size: 1.1rem;
-  letter-spacing: 8px;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -91,9 +92,81 @@ section {
   @include body-container;
   margin: 6rem auto;
 
+  h2 { margin-left: -36px;}
+
 }
 
 
 
-
 // Shadowbox
+
+.shadowbox-items {
+
+  .row {
+    display: block;
+  }
+
+  .thumbs {
+    display: flex;
+    margin: 2rem 0;
+    padding: 0;
+    
+    li {
+      background-size: cover;
+      background-position: center;
+      display: block;
+      flex: 1;
+      height: 160px;
+      margin-right: 4px;
+      transition: all 200ms;
+      width: 25%;
+      
+       &:hover {
+        background-size: 100%;
+        cursor: pointer;
+        filter: brightness(0.6);
+      }
+    } // li
+  } // .thumbs
+  
+  .details {
+    padding: 0;
+
+    li {
+      background-image: none;
+      display: none;
+      margin-top: 20px;
+      width: 100%;
+
+      .item-content {
+        display: flex;
+
+        .image {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 344px;
+        }
+
+        .text {
+          width: 60%;
+
+          .title {}
+          .notes {}
+          .author {}
+        }
+      } // .item-content
+    } // li
+  } // .details
+  
+  .thumb-default { filter: brightness(1); }
+  .thumb-focused {
+    background-size: 100%;
+    filter: brightness(0.6);
+    transform: scale(0.94);
+  }
+
+  .close { }
+
+
+} // .shadowbox-items
