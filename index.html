@@ -3,11 +3,11 @@ layout: default
 ---
 
 
-<header>
+<header id="preamble">
   <div class="body-container">
     <p class="label-serif-small">Oh, I love you a lot</p>
-    <h1>I love you from the <br> top of my heart</h1>
-    <p>Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum.</p>
+    <h1>I love you from the top of my heart</h1>
+    <p class="intro">Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum.</p>
     <p class="label-sans-small">Kelly & Brandon</p>
     <div class="ctas">
       <button>RSVP</button>
@@ -16,30 +16,37 @@ layout: default
   </div>
 </header>
 
-<section class=" shadowbox">
-  <h2>1. &nbsp;Shadow Box</h2>
+<nav>
+  <p class="label-sans-small">Contents</p>
+  <ol>
+    <!-- <li class="link-preamble active"><a href="#preamble">Preamble</a></li> -->
+    <li class="link-shadowbox"><a href="#shadowbox">Shadowbox</a></li>
+    <li class="link-ceremony"><a href="#ceremony">Ceremony & Reception</a></li>
+    <li class="link-playlist"><a href="#playlist">Playlist</a></li>
+    <li class="link-thanks"><a href="#thanks">Thanks</a></li>
+  </ol>
+</nav>
+
+<section class="shadowbox">
+  <h2 id="shadowbox">1. &nbsp;Shadow Box</h2>
   <p>Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.</p>
 
   {% include shadowbox.html %}
 </section>
 
-<section class=" chicago">
-  <h2>2. &nbsp;Chicago Ceremony</h2>
-  <p>Aenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-</section>
-
-<section class=" durham">
-  <h2>3. &nbsp;Durham Celebration</h2>
+<section class="ceremony">
+  <h2 id="ceremony">2. &nbsp;Ceremony & Reception</h2>
   <p>Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.</p>
 </section>
 
 <section class=" playlist">
-  <h2>4. &nbsp;Playlist</h2>
+  <h2 id="playlist">3. &nbsp;Playlist</h2>
   <p>Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.</p>
 </section>
 
 <section class=" thanks">
-  <h2>5. &nbsp;Thanks</h2>
+  <h2 id="thanks">4. &nbsp;Thanks</h2>
   <p>Aenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+  <p>Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.</p>
 </section>
 

@@ -21,10 +21,12 @@ body {
 
 @mixin body-container {
   margin: 0 auto;
-  max-width: 920px;
-  padding-right: 40px;
+  max-width: 1400px;
+  padding: 0 20rem 0 4rem;
 
-  p { max-width: 720px;}
+  p {
+    max-width: $break-small;
+  }
 }
 
 .body-container { @include body-container; }
@@ -92,10 +94,30 @@ section {
   @include body-container;
   margin: 6rem auto;
 
-  h2 { margin-left: -36px;}
+  h2 {
+    margin-left: -36px;
+    padding-top: 4rem;
+  }
 
 }
 
+// Nav
+
+nav {
+  position: absolute;
+  right: 6vw;
+  top: 292px;
+  z-index: 1;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 120px !important;
+}
+
+.active {
+  a { color: red; }
+}
 
 
 // Shadowbox

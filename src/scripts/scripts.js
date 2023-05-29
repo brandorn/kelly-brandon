@@ -15,8 +15,9 @@ $(document).ready(function(){
           scrollTop: $(this).offset().top - 20
       });
     }
-  })
+  });
 
+  // Rules for thumbnail "close"
   $('.close').click(function() {
     var thisDetails = $(this).closest('li');
     var thisOrder = $(this).closest('li').prop('className');
@@ -28,7 +29,49 @@ $(document).ready(function(){
     if ($('.thumbs li').hasClass(thisOrder)) {
       $('.thumbs li').removeClass('thumb-focused');
     }
+  });
 
-  })
+  // Algins nav with top of intro
+  $(function() {
+    var introTop = $('.intro').offset().top;
 
-});
+    $('nav').css('top', introTop);
+  });
+
+  // Fixes nav on scroll
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    var nav = $('nav');
+
+    if (scroll > 160 ) {
+      nav.addClass('fixed-nav');
+    } else {
+      nav.removeClass('fixed-nav');
+    }
+  });
+
+  // Highlights active section in fixed nav
+  const anchors = document.querySelectorAll('h2');
+  const links = document.querySelectorAll('nav > ol > li');
+
+  window.addEventListener('scroll', (event) => {
+    if (typeof(anchors) != 'undefined' && anchors != null && typeof(links) != 'undefined' && links != null) {
+      let scrollTop = window.scrollY;
+      
+      // highlight the last scrolled-to: set everything inactive first
+      links.forEach((link, index) => {
+        link.classList.remove("active");
+      });
+      
+      // then iterate backwards, on the first match highlight it and break
+      for (var i = anchors.length-1; i >= 0; i--) {
+        if (scrollTop > anchors[i].offsetTop - 64) {
+          links[i].classList.add('active');
+          break;
+        }
+      }
+    }
+  });
+
+
+}) // doc.ready
