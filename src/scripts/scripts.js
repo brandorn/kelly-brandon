@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+  // Shadowbox thumbs
   $('.thumbs li').click(function() {
   var thumbClass = $(this).attr('class');
   
@@ -17,7 +19,7 @@ $(document).ready(function(){
     }
   });
 
-  // Rules for thumbnail "close"
+  // Shadowbox "close" button
   $('.close').click(function() {
     var thisDetails = $(this).closest('li');
     var thisOrder = $(this).closest('li').prop('className');
@@ -44,9 +46,9 @@ $(document).ready(function(){
     var nav = $('nav');
 
     if (scroll > 160 ) {
-      nav.addClass('fixed-nav');
+      nav.addClass('fixed');
     } else {
-      nav.removeClass('fixed-nav');
+      nav.removeClass('fixed');
     }
   });
 
@@ -72,6 +74,5 @@ $(document).ready(function(){
       }
     }
   });
-
 
 }) // doc.ready

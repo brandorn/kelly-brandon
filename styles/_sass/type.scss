@@ -76,6 +76,20 @@ $sans: 'Brandon Grotesque', -apple-system, Helvetica, Arial, sans-serif;
 }
 
 @font-face {
+  src: url(/src/fonts/ebgaramond-medium.ttf);
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  src: url(/src/fonts/ebgaramond-mediumitalic.ttf);
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 600;
+}
+
+@font-face {
   src: url(/src/fonts/ebgaramond-bold.ttf);
   font-family: 'EB Garamond';
   font-style: normal;

@@ -3,9 +3,10 @@
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  
   font-size: 100%;
-  text-rendering: optimizeLegibility;
+  font-variant-numeric: normal;
+  scroll-behavior: smooth;
+  // text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
@@ -17,19 +18,28 @@ html {
 
 body {
   color: $black-01;
+  margin-bottom: 12rem;
 }
 
 @mixin body-container {
   margin: 0 auto;
-  max-width: 1400px;
-  padding: 0 20rem 0 4rem;
+  max-width: 1280px;
+  padding: 0 20rem 0 6rem;
+
+  @media all and (max-width: $break-medium) { padding: 0 20rem 0 2rem; }
+  @media all and (max-width: $break-small) { padding: 0 2rem; }
 
   p {
-    max-width: $break-small;
+    max-width: 760px;
   }
 }
 
 .body-container { @include body-container; }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
 
 
 // Type
@@ -51,6 +61,8 @@ h2 {
   margin-bottom: 2rem;
   text-transform: uppercase;
   font-weight: 700;
+
+  @media all and (max-width: $break-tiny) { font-size: 0.96rem; }
 }
 
 h3 {}
@@ -61,17 +73,26 @@ p {
   letter-spacing: 2px;
 }
 
-.label-serif-small {
+@mixin label-serif-small {
   font-family: $serif;
   font-size: 1rem;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 6px;
   line-height: 100%;
   text-transform: lowercase;
 }
 
-.label-sans-small {
+@mixin label-sans-medium {
+  font-family: $sans;
+  font-size: 0.94rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+@mixin label-sans-small {
   font-family: $sans;
   font-size: 0.86rem;
   font-weight: 700;
@@ -81,12 +102,84 @@ p {
 }
 
 
-// Header & Nav
+// Header
 
 header {
-  background-color: tan;
+  background: no-repeat url('/src/img/header-bg.jpg');
+  background-size: cover;
   padding: 6rem 0;
+
+  @media all and (max-width: $break-tiny) { padding: 3rem 0; }
+
+  #preamble { display: none; }
+
+  .eyebrow { @include label-serif-small; }
+
+  .author {
+    @include label-sans-small;
+    margin-top: 1.5rem;;
+
+    &:before {
+      background: $black-01;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      margin: 0 12px 4px 0;
+      width: 20px;
+    }
+  }
 }
+
+// Buttons
+
+form {
+
+  input {
+    @include label-sans-medium;
+
+    border: 0;
+    color: $white-01;
+    padding: 12px 72px;
+
+    @media all and (max-width: $break-medium) { padding: 12px 48px; }
+
+    @media all and (max-width: $break-tiny) {
+      padding: 16px 0;
+      width: 100%;
+    }
+  }
+
+  &.primary input {
+    background: $black-01;
+    
+    &:hover { background: lighten($black-01, 15%);}
+  }
+
+  &.secondary input {
+    background: $brown-01;
+
+    &:hover { background: lighten($brown-01, 10%);}
+  }
+} // .form
+
+.ctas {
+  margin-top: 3rem;
+
+  form {
+    display: inline-block;
+
+    &:nth-child(n+2) { margin-left: 1rem;}
+
+    @media all and (max-width: $break-tiny) {
+      display: block;
+      &:nth-child(n+2) {
+        margin-left: 0;
+        margin-top: 1rem;
+      }
+    }
+  }
+} // .ctas
+
 
 // Body
 
@@ -97,28 +190,104 @@ section {
   h2 {
     margin-left: -36px;
     padding-top: 4rem;
-  }
 
+    @media all and (max-width: $break-medium) {
+      margin-left: 0;
+      padding-top: 0;
+    }
+  }
 }
 
 // Nav
 
 nav {
   position: absolute;
-  right: 6vw;
-  top: 292px;
+  right: 200px;
   z-index: 1;
-}
+  
+  @media all and (max-width: 1400px) {
+    right: 40px;
+  }
+  @media all and (min-width: 1400px) {
+    right: 200px;
+  }
+  @media all and (min-width: 2000px) {
+    right: 480px;
+  }
+  @media all and (max-width: $break-small) {
+    border: 2px solid $black-01;
+    margin: 4rem auto auto;
+    max-width: 360px;
+    padding: 2rem 0;
+    position: initial;
+  }
 
-.fixed-nav {
-  position: fixed;
-  top: 120px !important;
-}
+  .label {
+    @include label-sans-small;
+    display: none;
+    padding-left: 24px;
 
-.active {
-  a { color: red; }
-}
+    @media all and (max-width: $break-small) {
+      display: block;
+      padding: 0;
+      text-align: center;
+    }
+  }
 
+  li {
+    @include label-serif-small;
+    border-left: 1px solid $black-04;
+    font-weight: 600;
+    letter-spacing: 3px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5rem 0 0.5rem 24px;
+    position: relative;
+
+    @media all and (max-width: $break-small) { text-align: center; }
+
+    a {
+      &:link, &:visited, &:active { 
+        color: $black-01;
+        text-decoration: none;
+      
+      &:hover { color: $red-01; }
+      }
+    }
+
+    &.active {
+      &:before {
+        content: "";
+        background: $red-01;
+        display: block;
+        height: 34px;
+        left: -1px;
+        position: absolute;
+        top: 0;
+        width: 2px;
+
+        @media all and (max-width: $break-small) { display: none; }
+      }
+
+      a {
+        color: $red-01;
+        @media all and (max-width: $break-small) { color: $black-01; }
+
+        &:hover { color: $red-01; }
+      }
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 120px !important;
+
+    @media all and (max-width: $break-small) {
+      position: initial;
+    }
+  }
+
+} // nav
 
 // Shadowbox
 
@@ -144,7 +313,6 @@ nav {
       width: 25%;
       
        &:hover {
-        background-size: 100%;
         cursor: pointer;
         filter: brightness(0.6);
       }
