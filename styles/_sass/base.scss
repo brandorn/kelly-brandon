@@ -65,10 +65,7 @@ h2 {
   text-transform: uppercase;
   font-weight: 700;
 
-  @media all and (max-width: $break-medium) {
-    margin-left: 0;
-    padding-top: 0;
-  }
+  @media all and (max-width: $break-medium) { margin-left: 0; }
 
   @media all and (max-width: $break-tiny) { font-size: 0.96rem; }
 }
