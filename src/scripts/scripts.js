@@ -33,7 +33,7 @@ $(document).ready(function(){
     }
   });
 
-  // Algins nav with top of intro
+  // Aligns nav with top of intro
   $(function() {
     var introTop = $('.intro').offset().top;
 
