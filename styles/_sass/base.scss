@@ -67,7 +67,7 @@ h2 {
 
   @media all and (max-width: $break-medium) { margin-left: 0; }
 
-  @media all and (max-width: $break-tiny) { font-size: 0.96rem; }
+  @media all and (max-width: $break-tiny) { font-size: 1.1rem; }
 }
 
 h3 {
@@ -76,8 +76,6 @@ h3 {
   letter-spacing: 0.75px;
   margin: 2rem 0 0.5rem 0;
   font-weight: 700;
-
-  @media all and (max-width: $break-tiny) { font-size: 0.96rem; }
 }
 
 p {
