@@ -13,9 +13,9 @@ $(document).ready(function(){
     } else {
       $('.details li.' + thumbClass).fadeIn('fast').css('display','block');
       $('.thumbs li.' + thumbClass).addClass('thumb-focused');
-      $('html,body').animate({
+      /*$('html,body').animate({
           scrollTop: $(this).offset().top - 20
-      });
+      });*/
     }
   });
 

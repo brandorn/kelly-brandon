@@ -1,7 +1,7 @@
 ---
 author: Brandon
-img: b-grandpa
-order: 25
+img: b-ge
+order: 22
 ---
 
 Notes...

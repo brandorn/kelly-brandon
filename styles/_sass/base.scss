@@ -81,8 +81,8 @@ h3 {
 p {
   font-family: $sans;
   font-size: 1.24rem;
-  letter-spacing: 0.2px;
-  line-height: 130%;
+  letter-spacing: 0.4px;
+  line-height: 140%;
   margin: 1rem 0;
 }
 
@@ -211,6 +211,7 @@ section {
   margin: 6rem auto;
 
   img {
+    display: block;
     margin-top: 2rem;
     max-width: 600px;
     width: 100%;
@@ -440,12 +441,7 @@ nav {
             @include label-serif-small;
             margin-bottom: 1.5rem;
           }
-          .notes {
-            p {
-              font-size: 1.08rem;
-              letter-spacing: 1px;
-            }
-          }
+          .notes { }
           .author {
             @include label-sans-small;
             font-size: 0.8rem;
