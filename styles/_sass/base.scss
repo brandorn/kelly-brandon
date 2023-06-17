@@ -23,7 +23,7 @@ body {
 
 @mixin body-container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1280px;
   padding: 0 20rem 0 6rem;
 
   @media all and (max-width: $break-medium) { padding: 0 20rem 0 2rem; }
@@ -307,10 +307,7 @@ nav {
     padding: 0.5rem 0 0.5rem 24px;
     position: relative;
 
-    @media all and (max-width: $break-small) {
-      padding-left: 40px;
-      // text-align: center;
-    }
+    @media all and (max-width: $break-small) { padding-left: 40px; }
 
     a {
       transition: all 150ms;
@@ -318,6 +315,8 @@ nav {
       &:link, &:visited, &:active { 
         color: $brown-01;
         text-decoration: none;
+
+        @media all and (max-width: $break-small) { color: $black-01; }
       
       &:hover { color: $red-01; }
       }
@@ -361,13 +360,15 @@ nav {
 
 .shadowbox-items {
 
+  margin-top: 3rem;
+
   .row {
     display: block;
   }
 
   .thumbs {
     display: flex;
-    margin: 2rem 0;
+    margin: 1% 0;
     padding: 0;
     
     li {
@@ -409,6 +410,7 @@ nav {
         background: no-repeat url('/src/img/header-bg.jpg');
         background-size: cover;
         display: flex;
+        margin-bottom: 2rem;
 
         @media all and (max-width: 560px) { display: block; }
 
@@ -429,7 +431,10 @@ nav {
           padding: 1rem 2rem;
           width: 60%;
 
-          @media all and (max-width: 560px) { width: auto; }
+          @media all and (max-width: 560px) { 
+            width: auto;
+            padding: 1rem;
+          }
 
           .title {
             @include label-serif-small;

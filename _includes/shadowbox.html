@@ -20,7 +20,7 @@
 
     <ul class="thumbs">
       {% for post in shadowboxList %}
-        {% if post.order > 5 and post.order < 11%}
+        {% if post.order > 5 and post.order < 11 %}
           {% include shadowbox-item-thumb.html %}
         {% endif %}
       {% endfor %}
@@ -28,6 +28,51 @@
     <ul class="details">
       {% for post in shadowboxList %}
         {% if post.order > 5 and post.order < 11 %}
+          {% include shadowbox-item-detail.html %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <ul class="thumbs">
+      {% for post in shadowboxList %}
+        {% if post.order > 10 and post.order < 16 %}
+          {% include shadowbox-item-thumb.html %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <ul class="details">
+      {% for post in shadowboxList %}
+        {% if post.order > 10 and post.order < 16 %}
+          {% include shadowbox-item-detail.html %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <ul class="thumbs">
+      {% for post in shadowboxList %}
+        {% if post.order > 15 and post.order < 21 %}
+          {% include shadowbox-item-thumb.html %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <ul class="details">
+      {% for post in shadowboxList %}
+        {% if post.order > 15 and post.order < 21 %}
+          {% include shadowbox-item-detail.html %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <ul class="thumbs">
+      {% for post in shadowboxList %}
+        {% if post.order > 20 and post.order < 26 %}
+          {% include shadowbox-item-thumb.html %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <ul class="details">
+      {% for post in shadowboxList %}
+        {% if post.order > 20 and post.order < 26 %}
           {% include shadowbox-item-detail.html %}
         {% endif %}
       {% endfor %}
