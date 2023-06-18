@@ -4,4 +4,4 @@ img: k-blossom
 order: 10
 ---
 
-One of the greatest joys I discovered upon coming to Durham was the people here, especially those involved at (and those adjacent to) The Gathering church. Moving to a new place can be an intimidating, uncertain endeavor but amidst it all I have never felt alone — a testament to the kind, welcoming, and loving community that surrounds Brandon (and now, me).
+Our story began during the pandemic, trading emails back and forth as we navigated life “inside.” During the first few months of lockdown (during which the lakefront running path was shut down), I found solace taking extra long walks around my neighborhood. These blossoms were discovered on one such walk and I think fondly back to those meandering days whenever I see it. 
